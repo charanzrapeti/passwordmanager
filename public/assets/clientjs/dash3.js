@@ -16,7 +16,7 @@ var requestOptions = {
   redirect: "follow",
 };
 
-fetch("http://localhost:3000/api/pass/" + id, requestOptions)
+fetch("/api/pass/" + id, requestOptions)
   .then((response) => response.text())
   .then((result) => {
     console.log(result);
@@ -80,7 +80,7 @@ submitbutton.addEventListener("click", (e) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:3000/api/pass/" + h1.textContent, requestOptions)
+    fetch("/api/pass/" + h1.textContent, requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .then(() => (window.location.href = "/dashboard"))

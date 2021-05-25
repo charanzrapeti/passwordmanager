@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
     redirect: "follow",
   };
 
-  fetch("http://localhost:3000/api/user/login", requestOptions)
+  fetch("/api/user/login", requestOptions)
     .then((response) => response.text())
     .then((result) => {
       console.log(result);

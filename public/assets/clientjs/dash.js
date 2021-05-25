@@ -13,7 +13,7 @@ var requestOptions = {
   redirect: "follow",
 };
 
-fetch("http://localhost:3000/api/user/me", requestOptions)
+fetch("/api/user/me", requestOptions)
   .then((response) => response.text())
   .then((result) => {
     const heading = document.querySelector(".heading");
@@ -33,7 +33,7 @@ var requestOptions = {
   redirect: "follow",
 };
 
-fetch("http://localhost:3000/api/pass", requestOptions)
+fetch("/api/pass", requestOptions)
   .then((response) => response.text())
   .then((result) => {
     const resultobject = JSON.parse(result);
@@ -95,7 +95,7 @@ fetch("http://localhost:3000/api/pass", requestOptions)
           redirect: "follow",
         };
 
-        fetch("http://localhost:3000/api/task/" + item.id, requestOptions)
+        fetch("/api/task/" + item.id, requestOptions)
           .then((response) => response.text())
           .then((result) => console.log(result))
           .then(() => (window.location.href = "/dashboard"))
@@ -123,7 +123,7 @@ fetch("http://localhost:3000/api/pass", requestOptions)
         redirect: "follow",
       };
 
-      fetch("http://localhost:3000/api/user/logout", requestOptions)
+      fetch("/api/user/logout", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           console.log(result);

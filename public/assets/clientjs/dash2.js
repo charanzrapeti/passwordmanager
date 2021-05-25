@@ -39,7 +39,7 @@ form.addEventListener("submit", (event) => {
     redirect: "follow",
   };
 
-  fetch("http://localhost:3000/api/pass", requestOptions)
+  fetch("/api/pass", requestOptions)
     .then((response) => response.text())
     .then((result) => {
       console.log(result);
