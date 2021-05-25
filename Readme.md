@@ -1,7 +1,2 @@
-# title - string
-
-# description - string
-
-# password - string
-
-# date - Date
+# password manager
+an application to store your passwords and usernames 
